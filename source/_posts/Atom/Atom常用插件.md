@@ -35,6 +35,16 @@ tags:
 |autocomplete-paths |路径自动完成插件||
 |pretty-json |json自动整理||
 
+### React
+
+|插件名|作用|备注|
+|-----|-----|-----|
+|react-snippets|||
+|react-es6-snippets |es6写法的react snippet||
+|language-babel|写React必不可少||
+|language-javascript-jsx |JavaScript, ES6, ES7, React JSX, Flow支持||
+|atom-react-autocomplete|项目内，组件名及状态的自动补全 ||
+
 
 ### 外观
 
