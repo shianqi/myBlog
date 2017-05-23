@@ -17,9 +17,11 @@ npm install --save-dev webpack-dev-server
 module.exports = {
     ...
     devServer: {
-        contentBase: "./",
-        port: 9000,
-        inline: true
+        contentBase: "./",  //告诉服务器在哪里，从提供内容
+        port: 9000,         //端口
+        inline: true,       //
+        compress: false,    //是否启用gzip压缩
+        historyApiFallback: false,  //将404定向到固定位置
     }
     ...
 };
@@ -34,6 +36,102 @@ module.exports = {
   ...
 }
 ```
+
+### webpack HotModuleReplacement
+```
+npm install --save react-hot-loader@next
+```
+Create a `.babelrc`
+```
+{
+  "presets": [
+    ["es2015", {"modules": false}],
+    "react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel"
+  ]
+}
+```
+`webpack.config.js`
+```
+const { resolve } = require('path');
+const webpack = require('webpack');
+
+module.exports = {
+  context: resolve(__dirname, 'src'),
+
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
+    './index.js'
+    // the entry point of our app
+  ],
+  output: {
+    filename: 'bundle.js',
+    path: resolve(__dirname, 'dist'),
+    publicPath: '/'
+  },
+
+  devtool: 'inline-source-map',
+
+  devServer: {
+    hot: true,
+    // enable HMR on the server
+  },
+
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: [ 'babel-loader', ],
+        exclude: /node_modules/
+        //注意，这里不能使用 options: {} 应该在项目根目录创建 .babelrc
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader?modules', ],
+      },
+    ],
+  },
+
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    // prints more readable module names in the browser console on HMR updates
+  ],
+};
+```
+`src/index.js`
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import { AppContainer } from 'react-hot-loader';
+// AppContainer is a necessary wrapper component for HMR
+
+import App from './components/App';
+
+const render = (Component) => {
+  ReactDOM.render(
+    <AppContainer>
+      <Component/>
+    </AppContainer>,
+    document.getElementById('root')
+  );
+};
+
+render(App);
+
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/App', () => {
+    render(App)
+  });
+}
+```
+
 
 ### webpack 仪表盘
 安装 `webpack-dashboard`
