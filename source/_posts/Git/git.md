@@ -5,6 +5,8 @@ tags:
     - git
 ---
 
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32717985&auto=0&height=66"></iframe>
+
 ## 安装
 #### 源码安装：
 先安装依赖库
@@ -92,6 +94,19 @@ $ git clone git://git.kernel.org/pub/scm/git/git.git
 `bug` 分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；
 
 `feature` 分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。
+
+## fork的项目与原作者同步
+
+```
+git remote add ecmadao git@github.com:ecmadao/react-times.git
+
+git fetch ecmadao
+
+git merge ecmadao/master
+
+git push origin master
+
+```
 
 ## bug分支
 
