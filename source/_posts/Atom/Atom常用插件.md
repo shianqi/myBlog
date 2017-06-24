@@ -1,7 +1,7 @@
 ---
 title: Atom 常用插件
 date: 2017-05-01 19:44:16
-tags: 
+tags:
     - 开发工具
 ---
 
@@ -16,24 +16,32 @@ tags:
 |emmet|HTML代码补全|emmet代码展开|
 |autoprefixer|css自动浏览器前缀适配|√|
 |minimap|类似sublime右侧代码地图|√|
+|highlight-selected|高亮选中单词|√|
 |open-in-browser|用默认应用打开文件|√|
 |color-picker|图形界面选取颜色|√|
 |regex-railroad-diagram|图形化正则表达式|√|
 |file-icons|美化默认icons|√|
 |atom-beautify|一键整理代码||
 |atom-ternjs|js代码提示很强大，高度定制化。||
-|atomatigit|git图形化操作||
 |docblockr|js注释doc||
 |autoclose-html|自动闭合HTML标签||
 |pigments|颜色显示插件|必装|
+|linter|错误检查工具||
+|linter-ui-default|linter 界面||
 |linter-eslint |es语法检错||
 |linter-jslint |js语法检错||
 |linter-htmllint |html语法检错||
 |linter-csslint |css语法检错||
-|linter|错误检查工具||
+|linter-sass-lint |sass语法检错||
 |simplified-chinese-menu |汉化插件||
 |autocomplete-paths |路径自动完成插件||
 |pretty-json |json自动整理||
+|language-gitignore|gitignore语法高亮||
+|markdown-preview-plus|markdown预览||
+
+```
+apm install emmet autoprefixer minimap highlight-selected open-in-browser color-picker regex-railroad-diagram file-icons atom-beautify docblockr autoclose-html pigments linter linter-ui-default linter-eslint linter-jslint linter-htmllint linter-csslint linter-sass-lint simplified-chinese-menu autocomplete-paths pretty-json language-gitignore markdown-preview-plus
+```
 
 ### React
 
