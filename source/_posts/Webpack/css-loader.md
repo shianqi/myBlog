@@ -1,11 +1,16 @@
 ---
 title: CSS-Modules
 date: 2017-05-11 20:10:16
-tags: 
+tags:
     - CSS
     - React
     - webpack
 ---
+## css-loader & style-loader 的区别
+
+css-loader以一个字符串的形式读入一个css文件。并返回带导入的CSS，并通过webpack的require功能解决url（...）：
+
+style-loader会使用这些样式，并在包含这些样式的页面的<head>元素中创建一个<style>标签。
 
 ## Options
 
