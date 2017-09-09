@@ -4,18 +4,17 @@ date: 2017-05-01 19:44:16
 tags:
     - 开发工具
 ---
+# 插件
 
-### 配置
-* tab 长度4
-
-
-### web开发
+## web开发
 
 |插件名|作用|备注|
 |-----|-----|-----|
 |emmet|HTML代码补全|emmet代码展开|
 |autoprefixer|css自动浏览器前缀适配|√|
 |minimap|类似sublime右侧代码地图|√|
+|minimap-linter|代码地图显示linter|√|
+|minimap-pigments|代码地图显示颜色|√|
 |highlight-selected|高亮选中单词|√|
 |open-in-browser|用默认应用打开文件|√|
 |color-picker|图形界面选取颜色|√|
@@ -30,20 +29,21 @@ tags:
 |linter-ui-default|linter 界面||
 |linter-eslint |es语法检错||
 |linter-jslint |js语法检错||
-|linter-htmllint |html语法检错||
-|linter-csslint |css语法检错||
+|linter-htmlhint |html语法检错||
+|linter-stylelint |css语法检错||
 |linter-sass-lint |sass语法检错||
 |simplified-chinese-menu |汉化插件||
 |autocomplete-paths |路径自动完成插件||
 |pretty-json |json自动整理||
 |language-gitignore|gitignore语法高亮||
 |markdown-preview-plus|markdown预览||
+|editorconfig|支持.editorconfig||
 
-```
-apm install emmet autoprefixer minimap highlight-selected open-in-browser color-picker regex-railroad-diagram file-icons atom-beautify docblockr autoclose-html pigments linter linter-ui-default linter-eslint linter-jslint linter-htmllint linter-csslint linter-sass-lint simplified-chinese-menu autocomplete-paths pretty-json language-gitignore markdown-preview-plus
+```bash
+apm install emmet autoprefixer minimap highlight-selected open-in-browser color-picker regex-railroad-diagram file-icons atom-beautify docblockr autoclose-html pigments linter linter-ui-default linter-eslint linter-jslint linter-htmlhint linter-csslint linter-sass-lint simplified-chinese-menu autocomplete-paths pretty-json language-gitignore markdown-preview-plus
 ```
 
-### React
+## React
 
 |插件名|作用|备注|
 |-----|-----|-----|
@@ -53,8 +53,7 @@ apm install emmet autoprefixer minimap highlight-selected open-in-browser color-
 |language-javascript-jsx |JavaScript, ES6, ES7, React JSX, Flow支持||
 |atom-react-autocomplete|项目内，组件名及状态的自动补全 ||
 
-
-### 外观
+## 外观
 
 |插件名|作用|备注|
 |-----|-----|-----|
