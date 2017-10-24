@@ -6,6 +6,7 @@ tags:
 ---
 
 ## 安装
+
 ```bash
 $ npm install -g json-server
 ```
@@ -13,6 +14,7 @@ $ npm install -g json-server
 ## 数据库文件
 
 新建一个 json 文件，默认文件名为 `db.json`
+
 ```bash
 {
   "user": [
