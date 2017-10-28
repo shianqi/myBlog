@@ -154,6 +154,12 @@ mongoexport -d mi-insight -c users -o users.dat
 
 默认为 `json` 格式
 
+**导出CSV**
+
+```bash
+mongoexport -d mi-insight -c indexs --type csv -f _id,itemId,words -o date.csv
+```
+
 ## mongoimport
 
 把一个特定格式文件中的内容导入到指定的collection中。
@@ -174,4 +180,10 @@ mongoexport -d mi-insight -c users -o users.dat
 > ./bin/mongoimport -d mi-insight -c users users.dat
 connected to: 127.0.0.1
 imported 9 objects
+```
+
+**导入CSV**
+
+```bash
+mongoimport -d mi-insight -c indexs --type csv --headerline --file ./date.csv
 ```
