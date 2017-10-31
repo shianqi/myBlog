@@ -160,6 +160,8 @@ mongoexport -d mi-insight -c users -o users.dat
 mongoexport -d mi-insight -c indexs --type csv -f _id,itemId,words -o date.csv
 ```
 
+**建议不要使用csv导出数据，如果原有数据中存在对象，数组。使用csv导出数据后无法 100% 还原原始数据。**
+
 ## mongoimport
 
 把一个特定格式文件中的内容导入到指定的collection中。
